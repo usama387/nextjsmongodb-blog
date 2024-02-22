@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./Links.module.css";
 import NavLink from "./NavLink/NavLink";
+import Image from "next/image";
 
 // #1 My nav links
 const links = [
@@ -36,7 +37,7 @@ const Links = () => {
   const session = true;
   const isAdmin = true;
   return (
-      //  #2 parent div of the pages
+    //  #2 parent div of the pages
     <div className={styles.container}>
       <div className={styles.links}>
         {links.map((link) => (
@@ -53,7 +54,14 @@ const Links = () => {
       </div>
 
       {/* #3.1 responsive hamburger menu */}
-      <button className={styles.menuButton} onClick={()=>setOpen(!open)}>Menu</button>
+      <Image
+        className={styles.menuButton}
+        src="/menu.png"
+        alt="menu image"
+        width={30}
+        height={30}
+        onClick={() => setOpen(!open)}
+      />
       {open && (
         <div className={styles.mobilelinks}>
           {links.map((link) => (

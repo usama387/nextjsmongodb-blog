@@ -1,18 +1,27 @@
 /* #1.1 Main Container */
-.container{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
-    color: gray;
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  color: gray;
 }
 
 /* #1.1 Logo Div */
-.logo{
-    font-weight: bold;
+.logo {
+  font-weight: bold;
 }
 
 /* #1.1 Text Div */
-.text{
-    font-size: 12px;
+.text {
+  font-size: 12px;
+}
+
+/* Media Queries for this page */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 }

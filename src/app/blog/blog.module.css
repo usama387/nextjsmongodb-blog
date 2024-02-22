@@ -1,0 +1,25 @@
+/* #1 for responsiveness */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* #1 only 3 items per line */
+.post{
+    width: 30%;
+}
+
+/* #1 using media queries for number of posts on different screens */
+@media (max-width: 1280px) {
+    .post{
+        width: 45%;
+    }
+    
+}
+@media (max-width: 768px) {
+    .post{
+        width: 100%;
+    }
+    
+}

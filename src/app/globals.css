@@ -75,9 +75,16 @@ a {
   }
 }
 
-/* #10 for mobile screen */
+/* #10 for more smaller screen */
 @media (max-width: 678px) {
   .container {
     width: 475px;
+  }
+}
+
+/* #10 for mobile screen */
+@media (max-width: 475px) {
+  .container {
+    width: 380px;
   }
 }

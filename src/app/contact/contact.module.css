@@ -1,0 +1,60 @@
+/* #1.1 Main Container */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+/* #1.1 */
+.imageContainer {
+    flex: 1;
+    position: relative;
+    /* to make appear on left height is must but on right is is not*/
+    height: 500px;
+}
+
+/* #1.1 */
+.Image {
+    object-fit: contain;
+}
+
+/* #2.1 */
+.formContainer {
+    flex: 1;
+}
+
+/* #2.1 */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* #2.1 */
+.form input,
+.form textarea {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--bgSoft);
+    color: var(--text);
+}
+
+/* #2.1 */
+.form button {
+    padding: 20px;
+    background-color: var(--btn);
+    color: var(--text);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media Query for this page */
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    } 
+}
