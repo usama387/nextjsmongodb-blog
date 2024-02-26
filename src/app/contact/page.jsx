@@ -2,6 +2,13 @@ import React from "react";
 import styles from "./contact.module.css";
 import Image from "next/image";
 
+
+// for better seo 
+export const metadata = {
+  title: "Contact Page",
+  description: "Contact Page Description",
+};
+
 const ContactPage = () => {
   return (
     // #1.1 Parent div

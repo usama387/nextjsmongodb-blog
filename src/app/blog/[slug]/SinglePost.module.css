@@ -26,12 +26,6 @@
 
 
 /* #2.1 */
-.avatar{
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* #2.1 */
 .title{
     font-size: 64px;
 }
@@ -41,25 +35,6 @@
 .details{
     display: flex;
     gap: 20px;
-}
-
-/* #2.1 */
-.detailText{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* #2.1 */
-.detailTitle{
-    color: gray;
-    font-weight: bold;
-}
-
-
-/* #2.1 */
-.detailValue{
-    font-weight: 500;
 }
 
 /* #2.1 */

@@ -10,9 +10,13 @@ const Josef = Josefin_Sans({
   display: "swap",
 });
 
+// Dynamic SEO template
 export const metadata = {
-  title: "Blog App",
-  description: "devoloped by Usama",
+  title: {
+    default:"Next.js 14 Homepage",
+    template:"%s | Next.js 14"
+  },
+  description: "Next.js starter app description",
 };
 
 export default function RootLayout({ children }) {

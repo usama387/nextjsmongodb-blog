@@ -2,6 +2,12 @@ import React from "react";
 import Image from "next/image";
 import styles from "./about.module.css";
 
+// for better seo
+export const metadata = {
+  title: "About Page",
+  description: "About Page Description",
+};
+
 const AboutPage = () => {
   return (
     // #1.1 Parent div of the about page
