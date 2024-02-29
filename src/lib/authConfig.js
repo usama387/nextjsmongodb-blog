@@ -24,7 +24,7 @@ export const authConfig = {
     authorized({ auth, request }) {
       const user = auth?.user;
       const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/admin");
-      // const isOnBlogPage = request.nextUrl?.pathname.startsWith("/blog");
+      const isOnBlogPage = request.nextUrl?.pathname.startsWith("/blog");
       const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
 
       //Only admin has access to admin page
@@ -33,9 +33,9 @@ export const authConfig = {
       }
 
       // Only authenticated users can access blog page
-      // if (isOnBlogPage && !user) {
-      //   return false;
-      // }
+      if (isOnBlogPage && !user) {
+        return false;
+      }
 
       //   Only unauthenticated users can access login page
       if (isOnLoginPage && user) {
