@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import styles from "./Links.module.css";
 import NavLink from "./NavLink/NavLink";
 import Image from "next/image";
+import { handleLogout } from "../../../lib/actions";
+
 
 // #1 My nav links
 const links = [
@@ -29,12 +31,11 @@ const links = [
   },
 ];
 
-const Links = () => {
+const Links = ({session}) => {
   // #3.1 useState to manage mobile hamburger and navbar
   const [open, setOpen] = useState(false);
 
   // Temporary user and admin session
-  const session = true;
   const isAdmin = true;
   return (
     //  #2 parent div of the pages
@@ -43,10 +44,13 @@ const Links = () => {
         {links.map((link) => (
           <NavLink item={link} key={link.id} />
         ))}
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdmin && <NavLink item={{ title: "Admin", href: "/admin" }} />}
+            {session.user?.isAdmin && <NavLink item={{ title: "Admin", href: "/admin" }} />}
+            <form action={handleLogout}>
             <button className={styles.logout}>Logout</button>
+              
+            </form>
           </>
         ) : (
           <NavLink item={{ title: "Login", href: "/login" }} />
