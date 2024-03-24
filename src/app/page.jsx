@@ -11,7 +11,7 @@ const Home = () => {
         <h1 className={styles.title}>Turn Ideas Into Reality</h1>
         <p className={styles.desc}>
           We transform visions into tangible realities.Bring your creative
-          concepts to life, turning innovative ideas into concrete realities
+          concepts to life, turning innovative ideas into concrete realities.
         </p>
         {/* #2.1 Buttons Div */}
         <div className={styles.buttons}>
